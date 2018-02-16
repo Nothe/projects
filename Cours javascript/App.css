@@ -1,0 +1,15 @@
+body {
+  padding: 10em;
+  margin: 0 auto;
+  max-width: 33em;
+  background-color: blue;
+}
+
+div {
+  font: 10em/150% Helvetica, Arial, sans-serif;
+  text-align: center;
+  /*padding: 1em;*/
+  margin-top: 10;
+  max-width: 33em;
+  background-color: green;
+}
