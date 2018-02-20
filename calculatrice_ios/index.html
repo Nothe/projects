@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+    <script src="main.js"></script>
+
+    <title>iOS Calculatrice</title>
+</head>
+<body>
+
+        <p>Calculatrice iPhone avec CSS Grid (et du JS) !</p>
+
+    <div class="main">
+        <div class="iphone">
+            <div class="container">
+                <div class="item result" id="result" >0</div>
+                <div class="item grey" onclick="raz()">AC</div>
+                <div class="item grey" onclick="envoyer('(')">(</div>
+                <div class="item grey" onclick="envoyer(')')">)</div>
+                <div class="item operator" onclick="envoyer('/')">/</div>
+                
+                <div class="item number" onclick="envoyer(7)">7</div>
+                <div class="item number" onclick="envoyer(8)">8</div>
+                <div class="item number" onclick="envoyer(9)">9</div>
+                <div class="item operator" onclick="envoyer('*')">*</div>
+
+
+                <div class="item number" onclick="envoyer(4)">4</div>
+                <div class="item number" onclick="envoyer(5)">5</div>
+                <div class="item number" onclick="envoyer(6)">6</div>
+                <div class="item operator" onclick="envoyer('-')">-</div>
+
+
+                <div class="item number" onclick="envoyer(1)">1</div>
+                <div class="item number" onclick="envoyer(2)">2</div>
+                <div class="item number" onclick="envoyer(3)">3</div>
+                <div class="item operator" onclick="envoyer('+')">+</div>
+
+                <div class="item" id="zero" onclick="envoyer(0)">0</div>
+                <div class="item number" onclick="envoyer('.')">,</div>
+                <div class="item operator" onclick="egale()">=</div>
+                <div class="hr"> <hr> </div>
+
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
