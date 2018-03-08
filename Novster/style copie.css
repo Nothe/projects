@@ -1,0 +1,383 @@
+/*
+  Oh Hello!
+
+  These are some base styles so that our tutorial looks good.
+
+  Let's go through the important bits real quick
+*/
+:root {
+    --yellow: #ffc600;
+    --black: #272727;
+  }
+  
+  html {
+    /* border-box box model allows us to add padding and border to our elements without increasing their size */
+    box-sizing: border-box;
+    /* A system font stack so things load nice and quick! */
+    font-family: -apple-system, "Helvetica Neue", Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--black);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  }
+  
+  /*
+    WAT IS THIS?!
+    We inherit box-sizing: border-box; from our <html> selector
+    Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+  */
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    background-image: url("topography.svg"),
+      /* linear-gradient(110deg, #f93d66, #6d47d9); */
+      linear-gradient(110deg, #7F99DE, #77BBC7);
+    background-size: 340px, auto;
+    min-height: calc(100vh - 100px);
+    margin: 50px;
+    /* background: white; */
+    background-position: fixed;
+    letter-spacing: -1px;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 5px 0;
+  }
+  /* Each item in our grid will contain numbers */
+  .item {
+    /* We center the contents of these items. You can also do this with flexbox too! */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid rgba(0, 0, 0, 0.03); */
+    border-radius: 100px;
+    font-size: 35px;
+    color: white;
+    background-color: #333333; /* best colour */
+    
+  }
+
+  p {
+    font-size: 50px;
+    border-bottom: 10px solid var(--yellow);
+    color: var(--black);
+  }
+
+.operator {
+    background-color: #F19838;
+ 
+}
+
+.grey {
+    background-color: #A6A6A6;
+    color: black;
+ 
+}
+
+.hr {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/4;
+  
+    
+}
+hr {
+    border-top: 5px solid #A6A6A6;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 30px;
+}
+
+#fullpage {
+  background-color: none;
+}
+
+
+.section {
+  text-align:center;
+  font-size: 3em;
+  background-color: #F19838;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-rows: repeat(4, 100px);
+  justify-content: center;
+  align-items: center;
+  /* background-color: #F19838; */
+    
+}
+
+#test {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3;
+  grid-row: 2;
+  background-color: aqua;
+  color: white;
+}
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
+
+$pink    : #ff006a;
+$purple  : #7b00e0;
+$orange  : #ff7900;
+$aqua    : #66e6ff;
+$yellow  : #ffc901;
+$font    : 'Titan One', san-serif;
+
+@mixin base-font($size) {
+    font-size: $size;
+    font-family: $font;
+}
+
+body {
+    background: linear-gradient(to top, $purple, $pink);
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.menu-container {
+    background-color: $yellow;
+    border-radius: 100%;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: -120px;
+    top: -120px;
+    transition: all 0.3s;
+  
+    &.full-menu {
+        border-radius: 0;
+        padding: 0 !important;
+        position: aboslute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transition: all 0.3s;
+    }
+}
+
+.full-menu .menu {
+    top: 40px;
+    left: 40px;
+}
+
+.menu {
+    color: white;
+    font-size: 3.5em;
+    position: absolute;
+    top: 160px;
+    left: 160px;
+    z-index: 100;
+    transition: all 0.3s;
+  
+    i {
+        opacity: 0.7; 
+        transform: scale(1);
+        transition: all 0.3s;
+
+        &:hover {
+            opacity: 1;
+            transform: scale(1.2);
+            transition: all 0.3s;
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+  
+    &.open {
+        opacity: .9;
+        visibility: visible;
+        height: 100%;
+
+        li {
+            animation: fadeInRight .5s ease forwards;
+            animation-delay: .35s;
+
+            &:nth-of-type(2) {
+                animation-delay: .4s;
+            }
+
+            &:nth-of-type(3) {
+                animation-delay: .45s;
+            }
+
+            &:nth-of-type(4) {
+                animation-delay: .50s;
+            }
+        }
+    }
+  
+    nav {
+        @include base-font(3.2em);
+        position: relative;
+        height: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 400;
+        text-align: center;
+    }
+  
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: inline-block;
+        position: relative;
+        height: 100%; 
+
+        li {
+            display: block;
+            height: 25%;
+            height: calc(100% / 4);
+            min-height: 50px;
+            position: relative;
+            opacity: 0;
+
+            a {
+                display: block;
+                position: relative;
+                color: #fff;
+                text-decoration: none;
+                overflow: hidden;
+                opacity: 0.7;
+                transform: scale(1);
+                transition: all 0.3s;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    opacity: 1;
+                    transform: scale(1.2);
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeInRight {
+  
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+h1 {
+    @include base-font(5em);
+    background-color: rgba($pink, 0.4);
+    border-radius: 100%;
+    box-shadow: 0 0 2em 1em rgba($pink, 0.4);
+    color: white;
+    margin: 30vh auto;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 8px 0 rgba($purple, 0.4);
+    transform: rotate(-12deg);
+    width: 800px;
+    height: auto;
+    z-index: -1;
+
+    span {
+        color: $yellow;
+    }
+}
+
+.blob {
+    animation: blobby 4s infinite;
+}
+
+.blob2 {
+    animation: blobby2 6s infinite;
+}
+
+@keyframes blobby {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+@keyframes blobby2 {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.18); }
+    100% { transform: scale(1); }
+}
+
+svg {
+    position: absolute;
+    top: 0;
+}
+
+#svg-right {
+    display: block;
+    fill: $purple;
+    opacity: 0.5;  
+    right: 0;
+    width: 60%;
+    z-index: -10;
+}
+
+#svg-left {
+    fill: $pink;
+    margin: 0;
+    width: 60%;
+    z-index: -10;
+}
+
+@media all and (max-width: 980px) {
+  
+  h1 {
+        @include base-font(3em);
+  }
+  
+}
+
+@media all and (max-width: 480px) {
+  
+  h1 {
+        @include base-font(2em);
+  }
+  
+}
+

@@ -1,0 +1,339 @@
+/*
+  Oh Hello!
+
+  These are some base styles so that our tutorial looks good.
+
+  Let's go through the important bits real quick
+*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url("https://fonts.googleapis.com/css?family=Titan+One");
+:root {
+  --yellow: #F5A425;
+  --black: #272727;
+  --red: #E92A31;
+
+
+ }
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: -apple-system, "Helvetica Neue", Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--black);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07); }
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  background-image: url("topography.svg"), linear-gradient(110deg, #7F99DE, #77BBC7);
+  background-size: 340px, auto;
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+  /* background: white; */
+  background-position: fixed;
+  letter-spacing: -1px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0; }
+
+
+p {
+  font-size: 30px;
+  color: var(--black);
+  margin: 0 50px 0 50px; 
+}
+
+.link-bottom {
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  grid-column: span 2 / -1;
+  grid-row: 4/6;
+  text-decoration: none;
+  margin-top: 100px;
+  color: inherit;
+}
+
+
+.section1 {
+  text-align: center;
+  font-size: 3em;
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+.section2 {
+  text-align: center;
+  font-size: 3em;
+  background-color: var(--red); 
+  color: white;
+}
+
+.section-grid1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 100px);
+  justify-content: center;
+  align-items: center; 
+}
+.section-grid2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center; 
+}
+
+
+#logo-novster {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  margin-bottom: 50px;
+}
+
+#novster {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3/4;
+  grid-row: 3/4;
+  font-size: 3em;
+  text-shadow: 5px 7px 3px rgba(26, 26, 26, 0.5);
+}
+
+#novster2 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2/5;
+  grid-row: 4/5;
+}
+
+
+#p1 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  grid-column: 2/5;
+  grid-row: 2/4;
+}
+
+#p2 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  grid-column: 2/5;
+  grid-row: 2/4;
+}
+
+
+
+body {
+  background: linear-gradient(to top, #7b00e0, #ff006a);
+  margin: 0;
+  height: 100%;
+  overflow: hidden; }
+
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.menu-container {
+  background-color: #1A1A1A;
+  border-radius: 100%;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: -120px;
+  top: -120px;
+  transition: all 0.3s;
+ }
+  .menu-container.full-menu {
+    border-radius: 0;
+    padding: 0 !important;
+    position: aboslute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: all 0.3s; }
+
+.full-menu .menu {
+  top: 40px;
+  left: 40px; }
+
+.menu {
+  color: white;
+  font-size: 3.5em;
+  position: absolute;
+  top: 160px;
+  left: 160px;
+  z-index: 100;
+  transition: all 0.3s; }
+  .menu i {
+    opacity: 0.7;
+    transform: scale(1);
+    transition: all 0.3s; }
+    .menu i:hover {
+      opacity: 1;
+      transform: scale(1.2);
+      transition: all 0.3s; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden; }
+  .overlay.open {
+    opacity: .9;
+    visibility: visible;
+    height: 100%; }
+    .overlay.open li {
+      animation: fadeInRight .5s ease forwards;
+      animation-delay: .35s; }
+      .overlay.open li:nth-of-type(2) {
+        animation-delay: .4s; }
+      .overlay.open li:nth-of-type(3) {
+        animation-delay: .45s; }
+      .overlay.open li:nth-of-type(4) {
+        animation-delay: .50s; }
+  .overlay nav {
+    font-size: 3.2em;
+    font-family: "Montserrat", san-serif;
+    position: relative;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    text-align: center; }
+  .overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%; }
+    .overlay ul li {
+      display: block;
+      height: 25%;
+      height: calc(100% / 4);
+      min-height: 50px;
+      position: relative;
+      opacity: 0; }
+      .overlay ul li a {
+        display: block;
+        position: relative;
+        color: var(--yellow);
+        text-shadow: 3px 3px 5px rgba(245, 164, 37, 0.5);
+        text-decoration: none;
+        overflow: hidden;
+        opacity: 0.7;
+        transform: scale(1);
+        transition: all 0.3s; }
+        .overlay ul li a:hover, .overlay ul li a:focus, .overlay ul li a:active {
+          opacity: 1;
+          transform: scale(1.2);
+          transition: all 0.3s; }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+h1 {
+  font-size: 5em;
+  font-family: "Monserrat", san-serif;
+  background-color: rgba(255, 0, 106, 0.4);
+  border-radius: 100%;
+  box-shadow: 0 0 2em 1em rgba(255, 0, 106, 0.4);
+  color: white;
+  margin: 30vh auto;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 8px 0 rgba(123, 0, 224, 0.4);
+  transform: rotate(-12deg);
+  width: 800px;
+  height: auto;
+  z-index: -1; }
+  h1 span {
+    color: #ffc901; }
+
+.blob {
+  animation: blobby 4s infinite; }
+
+.blob2 {
+  animation: blobby2 6s infinite; }
+
+@keyframes blobby {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.08); }
+  100% {
+    transform: scale(1); } }
+@keyframes blobby2 {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.18); }
+  100% {
+    transform: scale(1); } }
+svg {
+  position: absolute;
+  top: 0; }
+
+#svg-right {
+  display: block;
+  fill: #7b00e0;
+  opacity: 0.5;
+  right: 0;
+  width: 60%;
+  z-index: -10; }
+
+#svg-left {
+  fill: #ff006a;
+  margin: 0;
+  width: 60%;
+  z-index: -10; }
+
+@media all and (max-width: 980px) {
+  h1 {
+    font-size: 3em;
+    font-family: "Titan One", san-serif; } }
+@media all and (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+    font-family: "Titan One", san-serif; } }
+
+/*# sourceMappingURL=style.css.map */

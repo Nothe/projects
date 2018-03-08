@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/*
+ * Mixin for clearfix
+ * @include clearfix;
+*/
+@mixin clearfix {
+	&:before,
+	&:after {
+	    content: " "; /* 1 */
+	    display: table; /* 2 */
+	}
+
+	&:after {
+	    clear: both;
+	}
+}
+
+/*
+ * Mixin for easy media queries
+ * @include bp(tablet) { SCSS here };
+*/
+@mixin bp($point) {
+	@if $point == biggie {
+		@media (min-width : 1600px) { @content; }
+	}
+	@if $point == screen {
+		@media (min-width : 1024px) { @content; }
+	}
+	@else if $point == tablet {
+		@media (min-width : 768px) { @content; }
+	}
+	@else if $point == mobile {
+		@media (min-width : 480px) { @content; }
+	}	
+}
+
+@mixin bpm($point) {
+	@if $point == biggie {
+		@media (max-width : 1600px) { @content; }
+	}
+	@if $point == screen {
+		@media (max-width : 1024px) { @content; }
+	}
+	@else if $point == tablet {
+		@media (max-width : 767px) { @content; }
+	}
+	@else if $point == mobile {
+		@media (max-width : 480px) { @content; }
+	}
+}
+
+@mixin keyframes($name) {
+
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+   
+}

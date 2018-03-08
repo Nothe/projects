@@ -1,0 +1,20 @@
+@charset "UTF-8";
+// Make sure the charset is set appropriately
+
+//External libraries
+@import "~normalize.css";
+
+@import "variables";
+@import "partials/mixin";
+
+//@import "partials/webfont";
+@import "icons-novster";
+
+@import "partials/layout";
+@import "partials/header";
+
+@import "partials/menu";
+
+@import "partials/home";
+
+@import "partials/footer";

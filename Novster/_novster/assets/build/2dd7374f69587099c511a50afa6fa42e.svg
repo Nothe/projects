@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20120731 at Tue May 23 15:33:27 2017
+ By gcooper,,,
+</metadata>
+<defs>
+<font id="icons-novster" horiz-adv-x="512" >
+  <font-face 
+    font-family="icons-novster"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 6 9 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="0 -64 512 448"
+    underline-thickness="25"
+    underline-position="-52"
+    unicode-range="U+F101-F103"
+  />
+<missing-glyph 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name=".notdef" 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" 
+ />
+    <glyph glyph-name="facebook" unicode="&#xf101;" 
+d="M384 448q4 0 7 -3t3 -8v-78q0 -4 -3 -7t-7 -3h-45q-22 0 -29 -8.5t-7 -27.5v-49h78q4 0 7 -3t3 -8v-84q0 -4 -3 -7t-7 -3h-78v-213q0 -4 -3 -7t-8 -3h-87q-4 0 -7 3t-3 7v213h-67q-4 0 -7 3t-3 7v84q0 5 3 8t7 3h67v58q0 57 33.5 91.5t89.5 34.5h66z" />
+    <glyph glyph-name="twitter" unicode="&#xf102;" 
+d="M512 351q-21 -32 -53 -55l1 -13q0 -53 -20 -105.5t-56.5 -96t-94.5 -70.5t-128 -27q-87 0 -161 47q13 -1 25 -1q73 0 130 45q-34 0 -60.5 20.5t-37.5 52.5q10 -2 20 -2q14 0 28 3q-36 8 -60 37t-24 66v2q22 -13 47 -13q-47 31 -47 87q0 28 15 53q39 -49 95.5 -78
+t120.5 -32q-3 12 -3 24q0 43 31 74t74 31q46 0 77 -33q36 7 67 25q-12 -37 -46 -58q31 4 60 17z" />
+    <glyph glyph-name="youtube" unicode="&#xf103;" 
+d="M460 183q8 -32 8 -100q0 -66 -8 -100q-4 -16 -16.5 -27.5t-28.5 -13.5q-53 -6 -159 -6t-159 6q-16 2 -29 13.5t-16 27.5q-8 32 -8 100q0 67 8 100q4 17 16.5 28.5t29.5 13.5q52 6 158 6t159 -6q16 -2 29 -13.5t16 -28.5zM165 155v26h-89v-26h30v-163h29v163h30zM242 -8
+v141h-25v-108q-9 -12 -16 -12q-6 0 -6 6q-1 1 -1 10v104h-25v-112q0 -14 2 -20q4 -11 17 -11t29 17v-15h25zM339 34v57q0 20 -2 28q-5 16 -20 16t-27 -16v62h-25v-189h25v14q13 -16 27 -16q15 0 20 16q2 7 2 28zM436 58v29q0 23 -8 33q-11 15 -30 15t-31 -15q-8 -10 -8 -33
+v-49q0 -23 9 -33q11 -15 31 -15t30 15q6 8 6 16q1 2 1 16v4h-26q0 -15 -1 -18q-2 -10 -11 -10q-13 0 -13 20v25h51zM303 112q11 0 11 -19v-61q0 -19 -11 -19q-7 0 -13 6v86q6 7 13 7zM398 112q13 0 13 -20v-13h-26v13q0 20 13 20zM149 334q-4 21 -18 61q-10 29 -18 53h30
+l20 -75l20 75h29l-35 -114v-77h-28v77zM250 255q-19 0 -30 14q-8 11 -8 34v50q0 23 8 33q11 15 30 15q20 0 30 -15q8 -10 8 -33v-50q0 -23 -8 -34q-10 -14 -30 -14zM238 358v-60q0 -20 12 -20t12 20v60q0 20 -12 20t-12 -20zM329 255q-14 0 -17 10q-3 7 -3 22v112h26v-105
+q0 -9 1 -10q1 -6 6 -6q7 0 16 12v109h26v-142h-26v15q-15 -17 -29 -17z" />
+  </font>
+</defs></svg>

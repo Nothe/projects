@@ -1,0 +1,335 @@
+@import "variables";
+@import "partials/mixin";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 0.9rem;
+  font-family: $sigma_font;
+  line-height: 1.5;
+  color: #464646;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: #464646;
+  text-decoration: none;
+  transition: .3s all ease;
+
+  &:hover {
+    text-decoration: none;
+    color: #999;
+  }
+}
+
+.slideout-menu { 
+  display: none;
+}
+
+.header_mobile_container {
+  display: none;
+}
+
+.stadvancedmenu_sub {
+  display: none;
+}
+
+.top_banner {
+
+  background: white;
+
+  .wpb_row {
+    margin-bottom: 0;
+  }
+}
+
+.top_menu {
+  background: black;
+  color: white;
+  a {
+    color: white;
+  }
+}
+
+.top_nav {
+  float: right;
+  font-size: .9em;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    padding: 5px 15px;
+  }
+}
+
+.blur-up {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+  transition: filter 200ms, -webkit-filter 200ms;
+}
+
+.row {
+  margin: 0 auto;
+  width: 1200px;
+  max-width: 100%;
+  padding: 0 10px;
+
+  @include bp(tablet) {
+    padding: 0 20px;
+  }
+}
+header {
+  position: relative;
+  z-index: 2;
+}
+.center_column {
+  overflow: hidden;
+  z-index: 1;
+}
+.breadcrumb {
+  padding: 15px 0;
+  font-size: .9em;
+}
+.navigation-pipe {
+  padding: 0 5px;
+  color: #464646;
+}
+.no-btn {
+  background: none;
+  border: 0 none;
+}
+.no-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.hidden {
+  display: none;
+}
+
+.unvisible {
+  display: none;
+}
+
+.clear {
+  clear: both;
+}
+
+// Titles
+h1 {
+  font-family : Roboto;
+  font-weight: 500;
+  font-size: 2.1em;
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+}
+
+h2, .baseline {
+  font-family : "Playfair Display";
+  font-weight: 400;
+  font-size: 2.1em;
+}
+
+h3 {
+  font-family : Roboto;
+  font-weight: 500;
+  font-size: 1.8em;
+}
+
+h4 {
+  font-family : "Playfair Display";
+  font-weight: 400;
+  font-size: 1.3em;
+  line-height: 2;
+}
+
+h5 {
+  font-family : Roboto;
+  font-weight: 500;
+  font-size: 1.4em;
+}
+
+p, small, ul {
+  line-height: 2;
+}
+
+// Tiles
+.tiles {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 10px;
+
+  @include bp(tablet) {
+
+    margin-left: -2%;
+
+    > li {
+      display: block;
+      height: auto;
+      float: left;
+      padding-bottom: 0;
+    }
+  } 
+}
+
+@include bp(tablet) {
+  .four_up {
+    
+    > li {
+      margin-left: 2%;
+      width: 23%;
+    }
+  }
+
+  .three_up {
+    margin-left: -2.3%;
+
+    > li {
+      margin-left: 2.3%;
+      margin-bottom: 10px;
+      width: 31%;
+    }
+
+    > li.full {
+      width: 97%;
+    }
+  }
+
+  .two_up {
+    
+    > li {
+      margin-bottom: 10px;
+      margin-left: 2%;
+      width: 48%;
+    }
+  }
+}
+
+.header_logo 
+{
+  float: left;
+  width: 120px;
+  margin-right: 20px;
+  
+  a {
+    display: block;
+    padding: 4px 0;
+  }
+
+  i {
+    color: black;
+    font-size: 4em;
+  }
+}
+
+.main_nav {
+
+  display: inline-block;
+
+  nav {
+    display: inline-block;
+  }
+
+  a {
+    color: black;
+    display: block;
+    padding: 20px 5px;
+
+    @include bp(tablet) {
+      padding: 20px 10px;
+    }
+
+    @include bp(biggie) {
+      padding: 20px;
+    }
+  }
+
+  ul {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+
+    text-align: center;
+    display: inline-block;
+
+    &.m_alignment_1 {
+      position: relative;
+    }
+
+  }
+}
+
+.top_search {
+  display: inline-block;
+  position: relative;
+  form {
+    display: none;
+  }  
+}  
+
+.top_cart {
+  float: right;
+  position: relative;
+
+  li {
+    position: relative;
+    display: inline-block;   
+  }
+
+  a {
+    display: block;
+    padding: 20px 10px;
+    margin-bottom: -1px;
+    border-bottom: 1px solid transparent;
+  }
+
+  i {
+    margin-right: 5px;
+    font-size: 1.3em;
+    vertical-align: top;
+  }
+
+  .text {
+    display: none;
+
+    @include bp(screen) {
+      display: inline-block;
+    }
+  }
+}
+
+.category_intro {
+  background: black;
+}
+
+.product_item_image {
+  float: left;
+  margin-right: 10px;
+}
+
+.product_item_name {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.product_image_slideshow {
+  display: none;
+}
+
+.owl-carousel {
+  display: none;
+}
