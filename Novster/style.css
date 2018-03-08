@@ -117,7 +117,25 @@ p {
   grid-column: 3/4;
   grid-row: 3/4;
   font-size: 3em;
-  text-shadow: 5px 7px 3px rgba(26, 26, 26, 0.5);
+  text-shadow: 
+               -1px 1px 0 RGBA(244, 244, 244, 1.00),
+               -2px 2px 0 RGBA(244, 244, 244, 1.00),
+               -3px 3px 0 RGBA(244, 244, 244, 1.00),
+               -4px 4px 0 RGBA(244, 244, 244, 1.00),
+               -5px 5px 0 RGBA(244, 244, 244, 1.00),
+               -6px 6px 0 RGBA(244, 244, 244, 1.00);
+}
+
+.highlight {
+  color: blue;
+  font-size: 3em;
+  text-shadow: 
+               -1px 1px 0 RGBA(244, 244, 244, 1.00),
+               -2px 2px 0 RGBA(244, 244, 244, 1.00),
+               -3px 3px 0 RGBA(244, 244, 244, 1.00),
+               -4px 4px 0 RGBA(244, 244, 244, 1.00),
+               -5px 5px 0 RGBA(244, 244, 244, 1.00),
+               -6px 6px 0 RGBA(244, 244, 244, 1.00);
 }
 
 #novster2 {
