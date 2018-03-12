@@ -1,0 +1,57 @@
+/*
+  Oh Hello!
+
+  These are some base styles so that our tutorial looks good.
+
+  Let's go through the important bits real quick
+*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url("https://fonts.googleapis.com/css?family=Titan+One");
+:root {
+  --yellow: #F5A425;
+  --black: #272727;
+  --red: #E92A31;
+
+
+ }
+
+
+
+.blob {
+  animation: blobby 4s infinite; }
+
+.blob2 {
+  animation: blobby2 6s infinite; }
+
+.cls-3 {
+  animation: blobby 4s infinite; }
+
+.cls-4 {
+  animation: blobby2 6s infinite; }
+
+@keyframes blobby {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1); } }
+@keyframes blobby2 {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.07); }
+  100% {
+    transform: scale(1); } }
+
+
+@media all and (max-width: 980px) {
+  h1 {
+    font-size: 3em;
+    font-family: "Titan One", san-serif; } }
+@media all and (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+    font-family: "Titan One", san-serif; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -6,12 +6,11 @@
   Let's go through the important bits real quick
 */
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Titan+One");
 :root {
   --yellow: #F5A425;
   --black: #272727;
   --red: #E92A31;
-  --orange: ???;
 
 
  }
@@ -20,9 +19,10 @@ html {
   /* border-box box model allows us to add padding and border to our elements without increasing their size */
   box-sizing: border-box;
   /* A system font stack so things load nice and quick! */
-  font-family: -apple-system, Montserrat, "Helvetica Neue", Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 300;
+  font-family: -apple-system, "Helvetica Neue", Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
   font-size: 10px;
+  color: var(--black);
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07); }
 
 /*
@@ -54,13 +54,13 @@ h6 {
 
 
 p {
-  font-size: 2em;
+  font-size: 30px;
+  color: var(--black);
   margin: 0 50px 0 50px; 
 }
 
 #bg-home {
   z-index: 1;
-  height: 100vh;
 }
 
 .home{
@@ -68,10 +68,11 @@ p {
 }
 
 .link-bottom {
-  position: absolute;
-  bottom: 40px;
-  right: 50px;
-  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  grid-column: span 2 / -1;
+  grid-row: 4/6;
   text-decoration: none;
   margin-top: 100px;
   color: inherit;
@@ -89,21 +90,15 @@ p {
 .section2 {
   text-align: center;
   font-size: 3em;
-  background-color: var(--yellow); 
+  background-color: var(--red); 
   color: white;
 }
 
 .section3 {
-  background-image: url("../assets/img/topography.svg"), linear-gradient(to right, var(--yellow), var(--red));
-  background-color: white;
   text-align: center;
-  font-size: 3em; 
+  font-size: 3em;
+  background-color: var(--black); 
   color: white;
-}
-
-.section4{
-  background-image: url("../assets/img/texture.svg"), linear-gradient(to right, var(--yellow), var(--red));
-    
 }
 
 .section-grid1 {
@@ -122,26 +117,21 @@ p {
 }
 
 .section-grid3 {
-  
-  justify-content: center;
-  align-items: center; 
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center; 
-}
-
-.left {
   display: grid;
-  grid-column: span 1 / 1;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center; 
 }
 
 
 #logo-novster {
-  position: fixed;
-  z-index: 10;
-  right: 20px;
-  top: 20px;
-  height: 80px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  margin-bottom: 50px;
 }
 
 #novster {
@@ -149,8 +139,8 @@ p {
   justify-content: center;
   align-items: center;
   grid-column: 3/4;
-  grid-row: 2/3;
-  font-size: 3.5em;
+  grid-row: 3/4;
+  font-size: 3em;
   text-shadow: 
                -1px 1px 0 var(--red),
                -2px 2px 0 var(--red),
@@ -161,13 +151,12 @@ p {
 }
 
 .highlight {
-  display: inline;
-  color: var(--red);
+  color: blue;
   text-shadow: 
-               -1px 1px 0 white,
-               -2px 2px 0 white,
-               -3px 3px 0 white,
-               -4px 4px 0 white;
+               -1px 1px 0 RGBA(244, 244, 244, 1.00),
+               -2px 2px 0 RGBA(244, 244, 244, 1.00),
+               -3px 3px 0 RGBA(244, 244, 244, 1.00),
+               -4px 4px 0 RGBA(244, 244, 244, 1.00);
 }
 
 #novster2 {
@@ -176,7 +165,6 @@ p {
   align-items: center;
   grid-column: 2/5;
   grid-row: 4/5;
-  font-weight: 200;
 }
 
 
@@ -185,8 +173,8 @@ p {
   justify-content: center;
   align-items: center;
   color: white;
-  position: absolute;
-  top: 20%;
+  grid-column: 2/5;
+  grid-row: 2/4;
 }
 
 #p2 {
